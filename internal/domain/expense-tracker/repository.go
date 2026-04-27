@@ -6,8 +6,8 @@ type ExpenseRepository interface {
 	Save(ctx context.Context, expense *Expense) error
 	Delete(ctx context.Context, id string) error
 	GetAll(ctx context.Context) ([]*Expense, error)
-	GetSummary(ctx context.Context, expense *Expense) (int, error)
-	GetMonthSummary(ctx context.Context, expense *Expense) (int, error)
+	GetSummary(ctx context.Context) (int, error)
+	GetMonthSummary(ctx context.Context) (int, error)
 }
 
 // 🧠 Why context?
