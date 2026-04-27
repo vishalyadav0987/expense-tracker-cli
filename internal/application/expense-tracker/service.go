@@ -8,7 +8,7 @@ import (
 
 type ExpenseService interface {
 	AddExpense(ctx context.Context, input dto.AddExpenseInputDTO) error
-	ListExpense(ctx context.Context) ([]*dto.AddExpenseInputDTO, error)
+	ListExpense(ctx context.Context) ([]*dto.ExpenseDTO, error)
 	DeleteExpense(ctx context.Context, id string) error
 	GetSummary(ctx context.Context) (int, error)
 	GetMonthSummary(ctx context.Context) (int, error)
